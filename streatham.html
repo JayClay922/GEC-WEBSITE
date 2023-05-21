@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./assets/css/streatham-style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <style>
+        .jumbotron h1,
+        .jumbotron p,
+        .navbar a,
+        .banner-jumbotron h1,
+        .section h2,
+        .heading-left,
+        .heading-right,
+        .join-details h3,
+        .contact-heading {
+            font-family: 'Anton', sans-serif;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/11b5a55eb2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Global Evangelical Church, Streatham Homepage</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a class="navbar-brand nav-link" href="gec2.html">
+                <img src="./assets/Images/Picture3.jpg" width="40" height="40" class="church-logo" alt="">
+                <span>HOME</span>
+            </a>
+        </div>
+    </nav>
+
+    <div id="banner" class="banner-jumbotron jumbotron-fluid">
+        <div class="banner-overlay">
+            <div class="banner-container">
+                <h1 class="banner-display-4">STREATHAM 'GO YE' CHAPEL</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="section" id="weekly-schedule">
+            <h2>Weekly Schedule</h2>
+            <div class="days-container">
+                <div class="day sunday">
+                    <div class="heading-left">
+                        <h3>Sunday</h3>
+                    </div>
+                    <div class="content-left">
+                        <p>Bible Studies: 03:00pm - 03:30pm</p>
+                        <p>Sunday Service: 03:30pm - 05:00pm</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+                <div class="day monday">
+                    <div class="heading-right">
+                        <h3>Monday</h3>
+                    </div>
+                    <div class="content-right">
+                        <p>Prayer Meeting: 09:00am - 10:00am (Conference Call)</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+                <div class="day tuesday">
+                    <div class="heading-left">
+                        <h3>Tuesday</h3>
+                    </div>
+                    <div class="content-left">
+                        <p>Prayer Meeting: 09:00am - 10:00am (Conference Call)</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+                <div class="day wednesday">
+                    <div class="heading-right">
+                        <h3>Wednesday</h3>
+                    </div>
+                    <div class="content-right">
+                        <p>Prayer Meeting: 09:00am - 10:00am (Conference Call)</p>
+                        <p>Mid-Week Service: 07:30pm - 08:30pm (Zoom)</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+                <div class="day thursday">
+                    <div class="heading-left">
+                        <h3>Thursday</h3>
+                    </div>
+                    <div class="content-left">
+                        <p>Prayer Meeting: 09:00am - 10:00am (Conference Call)</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+                <div class="day friday">
+                    <div class="heading-right">
+                        <h3>Friday</h3>
+                    </div>
+                    <div class="content-right">
+                        <p>Prayer Meeting: 09:00am - 10:00am (Conference Call)</p>
+                        <p>Friday Service: 07:30 - 08:30pm (Zoom)</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+                <div class="day saturday">
+                    <div class="heading-left">
+                        <h3>Saturday</h3>
+                    </div>
+                    <div class="content-left">
+                        <p>Prayer Meeting: 09:00am - 10:00am (Conference Call)</p>
+                        <p>Daily Midnight Prayer: 12:00am - 01:00am (Conference Call)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="how-to-join">
+            <h2>How to Join Us</h2>
+            <div class="join-details">
+                <h3><i class="fa-solid fa-phone"></i> Telephone Conference</h3>
+                <p>Join us for prayers on 'Conference Call Number' - 0330 998 1260 (Meeting ID = 605510#)</p>
+                <h3><i class="fa-solid fa-video"></i> Zoom</h3>
+                <p>Join us for Mid-Week and Friday Service in 'Zoom' - Meeting ID = 816 825 0292</p>
+            </div>
+        </div>
+
+        <div class="section" id="directions">
+            <h2>Directions</h2>
+            <div class="map-search-container">
+                <div id="map" style="width: 450px; height: 400px;"></div>
+                <p>To plan your route, enter your postcode and click search!</p>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="address-search" placeholder="Enter Address">
+                </div>
+                <div class="search">
+                    <button class="search-button" onclick="openGoogleMaps()">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="footer">
+        <div class="contact-container">
+            <div class="contact-heading">CONTACT US</div>
+            <ul>
+                <li><i class="fa-solid fa-phone"></i> Pastor Eddie: +44 (0)7956 520 048</li>
+                <li><i class="fa-solid fa-phone"></i> Pastor Mike: +44 (0)7576 880 367</li>
+                <li><i class="fa-solid fa-phone"></i> Pastor Worlanyo: +44 (0)7985 480 836</li>
+                <li><i class="fa-solid fa-phone"></i> Bro. Johnny Wogormebu: +44 (0)7878 864 036</li>
+            </ul>
+            <div>Designed by the GEC, UK MEDIA/IT DEPARTMENT</div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="./assets/javascript/streatham-address-search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* nav styling */
+
+nav {
+    margin-bottom: 70px;
+}
+
+.nav-item-img img {
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: white;
+    position: relative;
+    margin-top: 10px;
+}
+
+.nav-link:hover {
+    color: rgb(232, 232, 164);
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    color: rgb(232, 232, 164);
+    background-color: rgb(232, 232, 164);
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.fade-in-nav {
+    animation: fade-in-nav 1s ease-in-out both;
+}
+
+@keyframes fade-in-nav {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+/* jumbotron content styling */
+
+.jumbotron {
+    height: 99vh;
+    background-image: url(../Images/welcome2.jpeg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    margin-bottom: 10;
+}
+
+.jumbotron::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.jumbotron h1 {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+}
+
+.fade-in {
+    display: inline-block;
+    animation: fade-in 1.5s ease-in-out both;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.fade-in-reverse {
+    display: inline-block;
+    animation: fade-in-reverse 1.5s ease-in-out both;
+}
+
+@keyframes fade-in-reverse {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+
+/*verse stylings*/
+
+.verse-jumbotron {
+    background-color: rgb(164, 164, 95);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
+    height: 20vh;
+}
+
+.verse-container h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-top: 20px;
+}
+
+.verse-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.fa-quote-left,
+.fa-quote-right {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+/*card stylings*/
+
+.branches-heading {
+    font-size: 80px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+.card-deck {
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.card {
+    margin: 10px;
+    width: 200%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7);
+    border-bottom-left-radius: 25px !important;
+    border-bottom-right-radius: 25px !important;
+}
+
+.card-body {
+    height: 46px;
+    background-color: rgba(26, 25, 25, 0.38);
+    border-bottom: 3px solid blue;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.card-title {
+    background-color: rgba(26, 25, 25, 0.38);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.card img:hover {
+    backdrop-filter: blur(10px);
+}
+
+.card h5 {
+    border-bottom: 2px solid blue;
+}
+
+/*event stylings*/
+
+.event-jumbotron {
+    background-image: url(../Images/events.jpeg);
+    backdrop-filter: blur(10px);
+    margin-top: 30px;
+    border-radius: 10px;
+    color: white;
+    height: 70vh;
+    padding: 20px;
+    width: 90%;
+    margin-left: 80px;
+
+}
+
+#events {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.event-display-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px;
+    padding-top: 100px;
+    font-size: 100px;
+    color: white;
+    position: relative;
+
+}
+
+.event-display-4:hover {
+    color: rgb(232, 232, 164);
+}
+
+/*footer styling*/
+
+footer {
+    margin-top: 30px;
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-container ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.contact-heading {
+    font-size: 80px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0 10px;
+}
+
+.fa-square-facebook,
+.fa-square-instagram,
+.fa-phone {
+    font-size: 30px;
+    justify-content: space-evenly;
+}
+
+/* Small devices (up to 576px) */
+@media (max-width: 576px) {
+
+    /* nav styling */
+    nav {
+      margin-bottom: 30px;
+    }
+  
+    .nav-link {
+      margin-top: 5px;
+    }
+
+    .navbar-menu {
+        display: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar.active .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .jumbotron {
+        height: 60vh;
+    }
+  
+    .jumbotron h1 {
+      font-size: 60px;
+    }
+  
+    .verse-container h1 {
+      font-size: 16px;
+    }
+  
+    .fa-quote-left,
+    .fa-quote-right {
+      font-size: 20px;
+    }
+  
+    .branches-heading {
+      font-size: 40px;
+    }
+  
+    .card {
+      width: 100%;
+      height: auto;
+    }
+  
+    .card-title {
+      margin-bottom: 1rem;
+    }
+  
+    .card-body {
+      height: auto;
+      padding: 10px;
+    }
+  
+    /* event stylings */
+    .event-jumbotron {
+      margin-top: 15px;
+      height: 40vh;
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .event-display-4 {
+      font-size: 60px;
+      padding-top: 50px;
+    }
+  
+    /* footer styling */
+    .contact-heading {
+      font-size: 60px;
+    }
+  
+    .contact-container ul li {
+      margin-right: 10px;
+    }
+  
+    .fa-square-facebook,
+    .fa-square-instagram,
+    .fa-phone {
+      font-size: 20px;
+    }
+  
+  }

@@ -1,0 +1,384 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/*nav stylings*/
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(26, 26, 85);
+    height: 60px;
+    /* Adjust the height as needed */
+    position: relative;
+    /* Add position relative */
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.church-logo {
+    border-radius: 50%;
+}
+
+.nav-link span {
+    position: relative;
+    /* Add position relative */
+    transition: color 0.3s ease-in-out;
+    /* Add transition for color change */
+}
+
+.nav-link span::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(232, 232, 164);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link span:hover {
+    color: rgb(232, 232, 164);
+}
+
+.nav-link span:hover::after {
+    width: 100%;
+}
+
+.nav-link span:not(:hover)::after {
+    width: 0;
+}
+
+
+/*streatham banner stylings*/
+.banner-jumbotron {
+    position: relative;
+    margin-top: 0px;
+    border-radius: 10px;
+    color: white;
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.banner-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../Images/north-welcome2.jpg);
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 255, 0.2);
+}
+
+.banner-container {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-display-4 {
+    text-align: center;
+    text-decoration: none;
+    font-size: 100px;
+    color: white;
+    position: relative;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+}
+
+
+/*grid section stylings*/
+.grid-container {
+    display: grid;
+    padding: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "weekly-schedule how-to-join"
+        "weekly-schedule directions";
+}
+
+.section {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+
+    position: relative;
+    top: -10px;
+    left: -10px;
+    margin: 10px;
+}
+
+.section h2 {
+    text-align: center;
+}
+
+/*Weekly schedule stylings*/
+#weekly-schedule {
+    grid-area: weekly-schedule;
+    /* background: url(../Images/week2.jpg); */
+    background-color: rgb(26, 26, 85);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: solid;
+}
+
+.days-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    height: 100%;
+}
+
+.day h3 {
+    position: relative;
+}
+
+.day h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: whitesmoke;
+}
+
+
+.content-right {
+    text-align: right;
+}
+
+.heading-right {
+    text-align: right;
+}
+
+/*How to joim stylings*/
+#how-to-join {
+    grid-area: how-to-join;
+    background-color: whitesmoke;
+}
+
+.join-details {
+    padding-top: 30px;
+}
+
+.icon {
+    margin-right: 5px;
+    padding-right: 2px;
+}
+
+/*Directions stylings*/
+#directions {
+    grid-area: directions;
+    background-color: whitesmoke;
+}
+
+.map-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#map {
+    width: 450px;
+    max-height: 70%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+}
+
+/*Footer(Contact) stylings*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-heading {
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 767px) {
+    /* Navbar */
+    nav {
+      height: auto;
+      width: 100%;
+    }
+    
+    .navbar-content {
+      flex-direction: column;
+    }
+    
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 10px 0;
+    }
+    
+    .nav-link span {
+      position: relative;
+      margin: 10px 0;
+    }
+    
+    .burger-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .line {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+    
+    /* Banner */
+    .banner-jumbotron {
+      height: 50vh;
+      width: 100%;
+    }
+    
+    .banner-display-4 {
+      font-size: 50px;
+      margin-bottom: 30px;
+    }
+    
+    /* Grid section */
+    .grid-container {
+      display: grid;
+      padding: 10px;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+        "weekly-schedule"
+        "how-to-join"
+        "directions";
+    }
+
+    #weekly-schedule {
+        font-size: 10px;
+    }
+    
+    /* How to join */
+    #how-to-join,
+    #directions {
+      margin-bottom: 30px;
+    }
+    
+    /* Footer */
+    .contact-heading {
+      font-size: 30px;
+    }
+  }
+  
+  /* Media queries for tablet devices */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Navbar */
+    .nav-link span {
+      margin: 0 10px;
+    }
+    
+    /* Banner */
+    .banner-jumbotron {
+      height: 60vh;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    
+    .banner-display-4 {
+      font-size: 80px;
+      margin-bottom: 50px;
+    }
+    
+    /* Grid section */
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+        "weekly-schedule how-to-join"
+        "weekly-schedule directions";
+    }
+  }
+  
+  /* Media queries for larger screens */
+  @media (min-width: 1024px) {
+    /* Navbar */
+    .nav-list {
+      display: flex;
+    }
+    
+    .nav-link span {
+      margin: 0 20px;
+    }
+    
+    /* Banner */
+    .banner-jumbotron {
+      height: 70vh;
+    }
+    
+    .banner-display-4 {
+      font-size: 100px;
+      margin-bottom: 60px;
+    }
+    
+    /* Grid section */
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "weekly-schedule how-to-join"
+        "weekly-schedule directions";
+    }
+  }
+  

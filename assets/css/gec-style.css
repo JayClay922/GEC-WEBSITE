@@ -1,0 +1,124 @@
+body {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+
+#church-logo {
+    height: 50px;
+    width: 50px;
+}
+
+.jumbotron {
+    background-color: white !important;
+    height: 80vh;
+}
+
+.container {
+    border-top: solid;
+    border-bottom: solid;
+}
+
+.jumbotron-logo {
+    height: 300px;
+    width: 350px;
+    margin-left: -20px;
+    margin-top: 20px !important;
+    position: relative;
+    z-index: 0;
+}
+
+.jumbotron-logo {
+    margin-top: -30px;
+    position: relative;
+    z-index: 0;
+}
+
+.jumbotron p {
+    font-weight: 20 !important;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.jumbotron .row {
+    margin-bottom: 0;
+}
+
+.jumbotron .col {
+    margin-bottom: 20px;
+}
+
+.display-4 {
+    text-align: center;
+    font-size: 83px !important;
+}
+
+.lead {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.card-group {
+    margin: 10px;
+}
+
+.card-title {
+    text-align: center;
+    background-color: rgba(26, 25, 25, 0.38);
+    border-bottom: 1px solid #ccc;
+    /* Add a 1px solid gray border underneath the title */
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+
+.card-deck {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: max-content;
+}
+
+.card {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 25px;
+    height: 460px;
+}
+
+
+.card-img-top {
+    height: 400px;
+}
+
+.event-button {
+    text-align: center !important;
+    position: relative;
+    justify-content: center !important;
+}
